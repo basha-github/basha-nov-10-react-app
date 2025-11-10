@@ -1,16 +1,21 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./basha/Home";
+import AboutUs from "./basha/AboutUs";
+import Contact from "./basha/Contact";
+import Movies from "./basha/Movies";
 
 export default function App() {
   return (
     <div>
-      
-      
-      <h1>Welcome</h1>
-      
-      
-      
-      
-      
-      </div>
-  )
+      <BrowserRouter>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/movies" element={<Movies />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
